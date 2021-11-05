@@ -11,3 +11,15 @@ img {
     height: 101px;
     margin-bottom: 100px;
 }
+
+.select-profile {
+    display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+#button-next {
+    margin-top: 20px;
+    background-color: #8187DC;
+}

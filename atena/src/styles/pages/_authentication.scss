@@ -12,25 +12,36 @@
   
   &__main {
     grid-area: main;
+
+    .welcome {
+      padding-top: 4%;
+    }
+    
+    .google {
+      margin-top: 6%;
+    }
+
+    p {
+      color: white;
+      font-size: 25px;
+
+      padding-top: 20px;
+    }
   }
 
   &__foot {
+    max-height: fit-content;
     grid-area: foot;
     background-color: #6c73d4;
+
+    p {
+      color: white;
+      font-size: 15px;
+      font-weight: 500;
+
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
-}
-
-.welcome {
-  padding-top: 4%;
-}
-
-.google {
-  margin-top: 4%;
-}
-
-p {
-  color: white;
-  font-size: 25px;
-
-  margin-top: 20px;
 }

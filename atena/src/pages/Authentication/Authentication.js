@@ -26,7 +26,7 @@ function Authentication() {
         </section>
       </div>
       <section className="authentication__foot">
-        <p>@ 2021 Atena Project</p>
+        <p>2021 - Atena Project</p>
       </section>
     </div>
   )

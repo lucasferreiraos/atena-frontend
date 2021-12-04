@@ -1,12 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import GoogleLogin from "react-google-login";
+import { Redirect } from "react-router-dom";
 
 import atenaLogo from "../../assets/images/atena-logo-named-purple.png"
 
 function Authentication() {
+  const [name, setName] = useState();
+  const [email, setEmail] = useState();
+  const [profilePic, setProfilePic] = useState();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   const responseGoogle = (response) => {
-    console.log(response);
+    const {
+      profileObj: {name, email, profilePic},
+    } = response;
+    setName(name);
+    setEmail(email);
+    setProfilePic(profilePic);
+    setIsLoggedIn(true);
   };
+  
   return(
     <div className="authentication">
       <div className="authentication__main">
@@ -23,6 +36,15 @@ function Authentication() {
             onSuccess={responseGoogle}
             onFailure={responseGoogle}
           />
+          {/* { isLoggedIn
+            ? <Redirect to="/dashboard" />
+            : <Redirect
+                to={{
+                  pathname: "",
+                  state: this.profileObj
+                }}
+              />
+          } */}
         </section>
       </div>
       <section className="authentication__foot">

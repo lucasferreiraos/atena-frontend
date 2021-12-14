@@ -20,6 +20,7 @@ function ChooseProfile(props){
       <div className="choose-profile__part1">
         <img src={atenaLogo} alt="Logo" />
         <div className="text">
+          <p>{props.profile}</p>
           <p>Olá, Júlia Joana!</p>
           <p>Bem-vindo(a) ao sistema Atena.</p>
           <br />

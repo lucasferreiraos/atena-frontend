@@ -5,7 +5,13 @@
 @import './base/reset';
 @import './base/typography';
 
+// 3. Components
+@import './components/sidebar';
 
-// Pages
+// 4. React Calendar Heatmap
+@import 'react-calendar-heatmap/dist/styles.css';
+
+// 5. Pages
 @import './pages/authentication';
 @import './pages/choose-profile';
+@import './pages/dashboard';

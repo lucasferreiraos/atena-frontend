@@ -1,0 +1,16 @@
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-areas: 'navigation content';
+
+  &__navigation {
+    background: "#8187DC";
+    width: 355px;
+    z-index: 10;
+  }
+
+  &__content {
+    background: white;
+
+  }
+}

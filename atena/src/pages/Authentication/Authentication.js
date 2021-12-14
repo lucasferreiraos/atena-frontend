@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import GoogleLogin from "react-google-login";
-import { Redirect } from "react-router-dom";
+
 
 import atenaLogo from "../../assets/images/atena-logo-named-purple.png"
 
@@ -11,12 +11,10 @@ function Authentication() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const responseGoogle = (response) => {
-    const {
-      profileObj: {name, email, profilePic},
-    } = response;
+    const { profileObj: { name, email, imgUrl } } = response;
     setName(name);
     setEmail(email);
-    setProfilePic(profilePic);
+    setProfilePic(imgUrl);
     setIsLoggedIn(true);
   };
   

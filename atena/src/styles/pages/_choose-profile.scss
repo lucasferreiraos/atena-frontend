@@ -1,0 +1,33 @@
+.choose-profile {
+  display: grid;
+  max-width: 100%;
+  height: 100vh;
+  text-align: center;
+  grid-template-areas: 
+    'part1'
+    'part2'
+  ;
+  background-color: #8187DC;
+  
+  p {
+    font-size: 30px;
+    color:#FFF;
+  }
+
+  &__part1 {
+    padding-top: 3%;
+    height: 50vh;
+    img {
+      width: 120px;
+      height: 138px;
+      margin-top: 5%;
+    }
+    .text {
+      padding-top: 50px;
+    }
+  }
+
+  &__part2 {
+    height: 50vh;
+  }
+}

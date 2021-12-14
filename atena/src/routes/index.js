@@ -10,8 +10,7 @@ export default function AppRoutes() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" />
-        <Route path="/login" element={<Authentication />} />
+        <Route path="/" element={<Authentication />} />
         <Route path="/choose-profile" element={<ChooseProfile />} />
         <Route path="/form" element={<Form />} />
         <Route path="/dashboard" element={<Dashboard />} />

@@ -5,7 +5,7 @@
   grid-template-areas:
     'navigation core'
   ;
-  grid-template-columns: 355px 100vh;
+  grid-template-columns: 355px 2fr;
 
   &__navigation {
     grid-area: navigation;
@@ -20,17 +20,14 @@
     .cards {
       border-color: red;
       border: 2px;
-      height: 50vh;
+      height: 30vh;
     }
 
-    .heatmap {
+    .react-calendar-heatmap {
+      height: 350px;
+      width: 100vh;
       align-items: center;
       text-align: center;
-      font-size: 20px;
-    }
-
-    .heatmap p {
-      padding-bottom: 5px;
     }
   }
 }

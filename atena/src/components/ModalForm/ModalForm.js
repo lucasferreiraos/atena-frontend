@@ -1,7 +1,7 @@
 import React from "react";
 
-function Form() {
+function ModalForm() {
   return <h1>form</h1>
 };
 
-export default Form;
+export default ModalForm;

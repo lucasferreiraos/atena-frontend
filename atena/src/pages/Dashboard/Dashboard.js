@@ -4,6 +4,7 @@ import Sidebar from "../../components/Sidebar/Sidebar";
 import { Breadcrumbs, Link } from "@mui/material";
 
 export default function Dashboard() {
+  // TODO: write function to fill squares according to number of events.
   return(
     <div className="main">
       <div className="main__navigation">
@@ -16,13 +17,13 @@ export default function Dashboard() {
         </Breadcrumbs>
         <div className="cards"></div>
         <div className="heatmap">
-          <p>Carga de trabalho 2021.2</p>
           <Heatmap
             startDate={new Date('2021-01-01')}
             endDate={new Date('2021-06-30')}
             showWeekdayLabels={true}
             monthLabels={["Jan", "Fev", "Mar", "Abr", "Mai", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]}
             weekdayLabels={["Seg", "Ter", "Qua", "Qui", "Sex", "Sab", "Dom"]}
+            gutterSize={3}
             values={[
               { date: '2021-01-01', count: 1 },
               { date: '2021-01-22', count: 2 },

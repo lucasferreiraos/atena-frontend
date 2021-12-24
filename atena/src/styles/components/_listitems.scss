@@ -1,0 +1,20 @@
+.main {
+  display: grid;
+  height: 100vh;
+  max-width: 100%;
+  grid-template-areas:
+    'navigation core'
+  ;
+  grid-template-columns: 355px 2fr;
+
+  &__navigation {
+    grid-area: navigation;
+    z-index: 10;
+  }
+
+  &__core {
+    grid-area: core;
+    padding: 35px 35px 0 35px;
+    background: white;
+  }
+}

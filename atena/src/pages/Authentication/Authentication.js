@@ -11,6 +11,7 @@ function Authentication() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const responseGoogle = (response) => {
+    console.log(response);
     const { profileObj: { name, email, imgUrl } } = response;
     setName(name);
     setEmail(email);

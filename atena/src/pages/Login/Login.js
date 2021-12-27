@@ -47,6 +47,8 @@ function Login() {
                   placeholder="E-mail"
                   size="small"
                   variant="outlined"
+                  value={email}
+                  onChange={event => setEmail(event.target.value)}
                   fullWidth
                 />
                 <TextField
@@ -55,6 +57,8 @@ function Login() {
                   placeholder="Senha"
                   size="small"
                   variant="outlined"
+                  value={password}
+                  onChange={event => setPassword(event.target.value)}
                   fullWidth
                 />
                 <Button
@@ -65,7 +69,7 @@ function Login() {
                 >
                   Entrar
                 </Button>
-                <Typography><Link>Esqueceu a senha?</Link></Typography>
+                <Typography><Link href="/esqueci-minha-senha">Esqueceu a senha?</Link></Typography>
                 <Typography>Ainda não tem uma conta?<Link>Registre-se</Link></Typography>
               </Paper>
             </Grid>

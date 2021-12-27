@@ -5,6 +5,7 @@ import Login from "../pages/Login/Login";
 import ChooseProfile from "../pages/ChooseProfile/ChooseProfile";
 import Dashboard from "../pages/Dashboard/Dashboard";
 import ListItems from "../components/ListItems/ListItems";
+import ForgotPassword from "../pages/ForgotPassword/ForgotPassword";
 
 export default function AppRoutes() {
   return (
@@ -13,7 +14,8 @@ export default function AppRoutes() {
         <Route path="/" element={<Login />} />
         <Route path="/choose-profile" element={<ChooseProfile />} />
         <Route path="/dashboard" element={<Dashboard />} />
-        <Route path="list-items" element={<ListItems />} />
+        <Route path="/list-items" element={<ListItems />} />
+        <Route path="/esqueci-minha-senha" element={<ForgotPassword />} />
       </Routes>
     </BrowserRouter>
   );

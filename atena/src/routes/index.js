@@ -15,7 +15,7 @@ export default function AppRoutes() {
         <Route path="/choose-profile" element={<ChooseProfile />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/list-items" element={<ListItems />} />
-        <Route path="/esqueci-minha-senha" element={<ForgotPassword />} />
+        <Route path="/redefinir-senha" element={<ForgotPassword />} />
       </Routes>
     </BrowserRouter>
   );

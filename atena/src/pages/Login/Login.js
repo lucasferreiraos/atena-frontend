@@ -10,9 +10,9 @@ function Login() {
 
   const paperStyle = {
     padding: 20,
-    height: "70vh",
+    height: "65vh",
     width: 380,
-    margin: "20px auto",
+    margin: "15px auto",
   };
 
   const buttonStyle = {
@@ -41,6 +41,7 @@ function Login() {
                 <Grid align="center">
                   <img src={atenaLogo} alt="Logo"></img>
                 </Grid>
+                <p>Gerencie sua rotina e sua agenda visualizando sua carga de trabalho durante o semestre</p>
                 <TextField
                   style={textInputStyle}
                   label="E-mail"
@@ -69,8 +70,10 @@ function Login() {
                 >
                   Entrar
                 </Button>
-                <Typography><Link href="/esqueci-minha-senha">Esqueceu a senha?</Link></Typography>
-                <Typography>Ainda não tem uma conta?<Link>Registre-se</Link></Typography>
+                <div className="login-footer">
+                  <p><a href="/redefinir-senha">Esqueceu a senha?</a></p>
+                  <p>Ainda não tem uma conta?<a href="/#"> Registre-se</a></p>
+                </div>
               </Paper>
             </Grid>
           </form>

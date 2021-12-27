@@ -1,4 +1,4 @@
-.authentication {
+.login {
   display: grid;
   max-width: 100%;
   height: 100vh;
@@ -17,18 +17,30 @@
       padding-top: 4%;
     }
     
-    .google {
+    .login-form {
       margin-top: 6%;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 60px;
+
+      input,
+      select,
+      textarea,
+      .radios,
+      .checks {
+        margin-bottom: 20px;
+      }
     }
 
     img {
-      height: 400px;
+      height: 130px;
       width: auto;
+      margin-bottom: 10px;
     }
 
     p {
       color: white;
-      font-size: 25px;
+      font-size: 20px;
 
       padding-top: 20px;
     }

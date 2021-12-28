@@ -1,16 +1,15 @@
 import React, { useState } from "react";
-import { Button, Grid, Link, Paper, TextField, Typography } from "@mui/material";
+import { Button, Grid, Paper, TextField } from "@mui/material";
 
 import atenaLogo from "../../assets/images/atena-logo-named-white.png"
 
 function Login() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
-  // const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const paperStyle = {
     padding: 20,
-    height: "65vh",
+    height: "auto",
     width: 380,
     margin: "15px auto",
   };
@@ -32,16 +31,17 @@ function Login() {
   return(
     <div className="login">
       <div className="login__main">
-        <section className="welcome">
-        </section>
-        <section className="login-form">
-          <form onSubmit={handleLogin}>
-            <Grid>
-              <Paper elevation={10} style={paperStyle}>
-                <Grid align="center">
-                  <img src={atenaLogo} alt="Logo"></img>
-                </Grid>
-                <p>Gerencie sua rotina e sua agenda visualizando sua carga de trabalho durante o semestre</p>
+        <Grid>
+          <Paper elevation={10} style={paperStyle}>
+            <Grid align="center">
+              <img src={atenaLogo} alt="Logo"></img>
+            </Grid>
+            <p>
+              Gerencie sua rotina e sua agenda visualizando sua carga
+              de trabalho durante o semestre
+            </p>
+            <section className="login-form">
+              <form onSubmit={handleLogin}>
                 <TextField
                   style={textInputStyle}
                   label="E-mail"
@@ -70,18 +70,16 @@ function Login() {
                 >
                   Entrar
                 </Button>
-                <div className="login-footer">
-                  <p><a href="/redefinir-senha">Esqueceu a senha?</a></p>
-                  <p>Ainda não tem uma conta?<a href="/registro"> Registre-se</a></p>
-                </div>
-              </Paper>
-            </Grid>
-          </form>
-        </section>
+              </form>
+            </section>
+            <div className="login-footer">
+              <p><a href="/redefinir-senha">Esqueceu a senha?</a></p>
+              <br />
+              <p>Ainda não tem uma conta? <a href="/registro">Registre-se</a></p>
+            </div>
+          </Paper>
+        </Grid>
       </div>
-      {/* <section className="login__foot">
-        <p>2021 - Atena Project</p>
-      </section> */}
     </div>
   )
 };

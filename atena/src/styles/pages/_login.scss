@@ -12,16 +12,11 @@
   
   &__main {
     grid-area: main;
+    padding-top: 8%;
 
-    .welcome {
-      padding-top: 4%;
-    }
-    
-    .login-form {
-      margin-top: 6%;
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 60px;
+    p {
+      color: #8187DC;
+      font-size: 18px;
     }
 
     img {
@@ -29,35 +24,17 @@
       width: auto;
       margin-bottom: 10px;
     }
-
-    p {
-      color: #8187DC;
-      font-size: 20px;
-
-      padding-top: 20px;
+    
+    .login-form {
+      margin-top: 15px;
     }
     
     .login-footer {
+      margin-top: 15px;
       p {
-        font-size: 12px;
+        font-size: 13px;
         color: #03071E;
       }
-    }
-  }
-
-  &__foot {
-    max-height: fit-content;
-    grid-area: foot;
-    background-color: #6c73d4;
-
-    p {
-      color: white;
-      font-size: 15px;
-      font-weight: 500;
-
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
     }
   }
 }

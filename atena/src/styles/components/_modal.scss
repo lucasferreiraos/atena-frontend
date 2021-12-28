@@ -9,23 +9,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .container {
-    background-color: white;
-    width: 30%;
-    height: auto;
-    border-radius: 8px;
-
-    .modal-header {
-      border-bottom: 1px solid rgb(187, 187, 187);
-      p {
-        text-align: start;
-        padding-left: 20px;
-        padding-top: 15px;
-        padding-bottom: 15px;
-        font-size: 21px;
-        font-weight: 500;
-      }  
-    }
-  }
+}
+.container {
+  background-color: white;
+  width: 30%;
+  height: auto;
+  border-radius: 8px;
+}
+.modal-header {
+  border-bottom: 1px solid rgb(187, 187, 187);
+  font-size: 0;
+}
+.modal-title {
+  padding: 20px;
+  font-size: 21px;
+  font-weight: 500;
+  display: inline-block;
+  vertical-align: top;
+}
+.modal-button-close {
+  float: right;
+  padding: 20px;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: top;
 }

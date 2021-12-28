@@ -2,9 +2,10 @@ import { Button, Grid, Paper } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import atenaLogo from "../../assets/images/atena-logo-horizontal-purple.png";
+import atenaLogo from "../../assets/images/atena-logo-horizontal-white.png";
 // import ModalRequestProfessor from "./ModalRequestProfessor";
 import ModalFormStudent from "./ModalFormStudent";
+import { margin } from "@mui/system";
 
 function Register(){
   // const [isProfessor, setIsProfessor] = useState("");
@@ -17,12 +18,16 @@ function Register(){
     padding: 20,
     height: "auto",
     width: 500,
-    margin: "20px auto",
+    margin: "220px auto",
   };
 
-  const buttonStyle = {
-    margin: "8px 0",
+  const buttonProfessor = {
     backgroundColor: "#8187DC"
+  }
+
+  const buttonStudent = {
+    backgroundColor: "#8187DC",
+    marginTop: 5
   }
 
   const backButtonStyle = {
@@ -39,14 +44,11 @@ function Register(){
 
   return(
     <div className="register">
-      <div className="register__part1">
-        <img src={atenaLogo} alt="logo"/>
+      <div className="register__part1">  
         <Grid>
           <Paper elevation={10} style={paperStyle}>
-            
-              <p className="title">Registro</p>
-              <p className="description">Para criar sua conta, precisamos saber que tipo de usuário(a) você é:</p>
-            
+            <p className="title">Registro</p>
+            <p className="description">Para criar sua conta, precisamos saber que tipo de usuário(a) você é:</p>        
             <Button
               fullWidth
               variant="contained"
@@ -57,7 +59,7 @@ function Register(){
                   setModalProfessorIsOpen(true)
                 }
               }
-              style={buttonStyle}
+              style={buttonProfessor}
             >
               Professor(a)
             </Button>
@@ -71,7 +73,7 @@ function Register(){
                   setModalStudentIsOpen(true)
                 }
               }
-              style={buttonStyle}
+              style={buttonStudent}
             >
               Aluno(a)
             </Button>

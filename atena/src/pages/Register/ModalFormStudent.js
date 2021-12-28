@@ -12,14 +12,14 @@ function ModalFormStudent(props) {
   const [password, setPassword] = useState();
 
   const buttonCancelStyle = {
-    marginTop: 20,
+    marginTop: 30,
     margin: "8px 4px",
     borderColor: "#8187DC",
     color: "#8187DC",
     width: "48.5%",
   }
   const buttonSaveStyle = {
-    marginTop: 20,
+    marginTop: 30,
     margin: "8px 4px",
     backgroundColor: "#8187DC",
     width: "48.5%",

@@ -2,7 +2,7 @@ import { Button, Grid, Paper } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import atenaLogo from "../../assets/images/atena-logo-named-white.png";
+import atenaLogo from "../../assets/images/atena-logo-horizontal-purple.png";
 import ModalRequestProfessor from "./ModalRequestProfessor";
 import ModalFormStudent from "./ModalFormStudent";
 
@@ -17,7 +17,7 @@ function Register(){
     padding: 20,
     height: "auto",
     width: 500,
-    margin: "220px auto",
+    margin: "20px auto",
   };
 
   const buttonStyle = {
@@ -40,15 +40,13 @@ function Register(){
   return(
     <div className="register">
       <div className="register__part1">
+        <img src={atenaLogo} alt="logo"/>
         <Grid>
           <Paper elevation={10} style={paperStyle}>
-            <Grid align="center">
-              <img src={atenaLogo} alt="logo" />
-            </Grid>
-            <div className="description">
+            
               <p className="title">Registro</p>
-              <p>Para criar sua conta, precisamos saber que tipo de usuário(a) você é:</p>
-            </div>
+              <p className="description">Para criar sua conta, precisamos saber que tipo de usuário(a) você é:</p>
+            
             <Button
               fullWidth
               variant="contained"

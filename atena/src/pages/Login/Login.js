@@ -72,7 +72,7 @@ function Login() {
                 </Button>
                 <div className="login-footer">
                   <p><a href="/redefinir-senha">Esqueceu a senha?</a></p>
-                  <p>Ainda não tem uma conta?<a href="/#"> Registre-se</a></p>
+                  <p>Ainda não tem uma conta?<a href="/registro"> Registre-se</a></p>
                 </div>
               </Paper>
             </Grid>

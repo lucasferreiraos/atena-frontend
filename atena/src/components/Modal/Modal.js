@@ -1,4 +1,4 @@
-import { CancelRounded } from "@mui/icons-material";
+// import { CancelRounded } from "@mui/icons-material";
 import React from "react";
 
 function Modal(props) {
@@ -9,13 +9,13 @@ function Modal(props) {
     children,
   } = props;
 
-  const styleCloseButton = {
-    textAlign: "end",
-    top: 16,
-    cursor: "pointer",
-    display: "flex",
-    color: "#E74245"
-  }
+  // const styleCloseButton = {
+  //   textAlign: "end",
+  //   top: 16,
+  //   cursor: "pointer",
+  //   display: "flex",
+  //   color: "#E74245"
+  // }
 
   const handleOutsideClick = (e) => {
     if (e.target.id === modalId) onClose();

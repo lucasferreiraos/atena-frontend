@@ -3,11 +3,11 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import atenaLogo from "../../assets/images/atena-logo-horizontal-purple.png";
-import ModalRequestProfessor from "./ModalRequestProfessor";
+// import ModalRequestProfessor from "./ModalRequestProfessor";
 import ModalFormStudent from "./ModalFormStudent";
 
 function Register(){
-  const [isProfessor, setIsProfessor] = useState("");
+  // const [isProfessor, setIsProfessor] = useState("");
   const [modalProfessorIsOpen, setModalProfessorIsOpen] = useState(false);
   const [modalStudentIsOpen, setModalStudentIsOpen] = useState(false);
 

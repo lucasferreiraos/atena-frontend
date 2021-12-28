@@ -29,6 +29,7 @@ function ForgotPassword() {
 
   const handleSendEmail = (event) => {
     event.preventDefault();
+    setEmailSendedSucessfully(true);
   };
 
   function backLoginPage() {
@@ -78,7 +79,7 @@ function ForgotPassword() {
                 variant="contained"
                 type="submit"
                 style={buttonStyle}
-                onClick={e => setEmailSendedSucessfully(true)}
+                onClick={handleSendEmail}
                 fullWidth
               >
                 Enviar

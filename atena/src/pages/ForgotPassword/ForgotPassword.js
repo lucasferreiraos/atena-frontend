@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { Alert, Button, Grid, InputAdornment, Paper, TextField, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
+import { Alert, Button, Grid, InputAdornment, Paper, TextField } from "@mui/material";
 import EmailOutlinedIcon from '@mui/icons-material/EmailOutlined';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 function ForgotPassword() {
   const paperStyle = {
     padding: 20,
-    height: "30vh",
+    height: "auto",
     width: 500,
     margin: "220px auto",
   };
@@ -15,12 +17,23 @@ function ForgotPassword() {
     backgroundColor: "#8187DC"
   }
 
+  const backButtonStyle = {
+    borderColor: "#8187DC",
+    color: "#8187DC"
+  }
+
   const [email, setEmail] = useState();
   const [emailSendedSucessfully, setEmailSendedSucessfully] = useState(false);
+
+  const navigate = useNavigate()
 
   const handleSendEmail = (event) => {
     event.preventDefault();
   };
+
+  function backLoginPage() {
+    navigate("/");
+  }
 
   return(
     <div className="forgot-password">
@@ -29,9 +42,13 @@ function ForgotPassword() {
           <Grid>
             <Paper elevation={10} style={paperStyle}>
               <Grid align="center">
-                <h3>Recuperação de senha</h3>
-                <p>Para recuperar sua senha, informe seu endereço de email
-                que nós enviaremos um link para a alteração da senha.</p>
+                <p className="title">
+                  Recuperação de senha
+                </p>
+                <p className="description">
+                  Para recuperar sua senha, informe seu endereço de email
+                  que nós enviaremos um link para a alteração da senha
+                </p>
               </Grid>
               <div className="email-alert">
                 {emailSendedSucessfully
@@ -66,6 +83,18 @@ function ForgotPassword() {
               >
                 Enviar
               </Button>
+
+              <div className="back">
+                <Button
+                  size="small"
+                  variant="outlined"
+                  startIcon={<ArrowBackIcon />}
+                  style={backButtonStyle}
+                  onClick={backLoginPage}
+                >
+                  Voltar
+                </Button>
+              </div>
             </Paper>
           </Grid>
         </div>

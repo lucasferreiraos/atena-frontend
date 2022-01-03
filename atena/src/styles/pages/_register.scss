@@ -1,0 +1,62 @@
+.register {
+  display: grid;
+  max-width: 100%;
+  height: 100vh;
+  grid-template-areas: 
+    'part1 part1'
+    'part2 part2'
+  ;
+  background-color: #8187DC;
+
+  &__part1 {
+    grid-area: part1;
+
+    .logo-inline {
+      align-items: center;
+      height: 150px;
+      width: 100px
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      text-align: start;
+    }
+    .description {
+      text-align: start;
+      margin-top: 10px;
+      margin-bottom: 25px;
+      font-size: 16px;
+    }
+
+    .back {
+      margin-top: 30px;
+      text-align: start;
+    }
+  }
+
+  &__part2 {
+    grid-area: part2;
+  }
+}
+
+.modal-request-professor {
+  padding: 20px;
+  
+  .email-alert {
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .description {
+    p {
+      text-align: start;
+      margin-bottom: 20px;
+      font-size: 16px;
+    }
+  }
+}
+
+.modal-form-student {
+  padding: 20px;
+}

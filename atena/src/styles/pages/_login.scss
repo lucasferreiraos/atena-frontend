@@ -1,0 +1,40 @@
+.login {
+  display: grid;
+  max-width: 100%;
+  height: 100vh;
+  text-align: center;
+  grid-template-areas:
+    'main main main'
+    'main main main'
+    'foot foot foot'
+  ;
+  background-color: #8187DC;
+  
+  &__main {
+    grid-area: main;
+    padding-top: 8%;
+
+    p {
+      color: #8187DC;
+      font-size: 18px;
+    }
+
+    img {
+      height: 130px;
+      width: auto;
+      margin-bottom: 10px;
+    }
+    
+    .login-form {
+      margin-top: 15px;
+    }
+    
+    .login-footer {
+      margin-top: 15px;
+      p {
+        font-size: 13px;
+        color: #03071E;
+      }
+    }
+  }
+}

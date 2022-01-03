@@ -6,12 +6,15 @@
 @import './base/typography';
 
 // 3. Components
+@import './components/form';
+@import './components/modal';
 @import './components/sidebar';
 
 // 4. React Calendar Heatmap
 @import 'react-calendar-heatmap/dist/styles.css';
 
 // 5. Pages
-@import './pages/authentication';
-@import './pages/choose-profile';
 @import './pages/dashboard';
+@import './pages/forgot-password';
+@import './pages/login';
+@import './pages/register';

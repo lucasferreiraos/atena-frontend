@@ -1,18 +1,31 @@
+import React, { useState } from "react";
+
 import { Button, Grid, Paper } from "@mui/material";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import React, { useState } from "react";
+
+import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import atenaLogo from "../../assets/images/atena-logo-horizontal-white.png";
-// import ModalRequestProfessor from "./ModalRequestProfessor";
+import { openModalProfessor, openModalStudent } from "../../redux/ducks/modal";
+
+import ModalRequestProfessor from "./ModalRequestProfessor";
 import ModalFormStudent from "./ModalFormStudent";
-import { margin } from "@mui/system";
 
 function Register(){
-  // const [isProfessor, setIsProfessor] = useState("");
   const [modalProfessorIsOpen, setModalProfessorIsOpen] = useState(false);
   const [modalStudentIsOpen, setModalStudentIsOpen] = useState(false);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  function handleModalProfessor() {
+    dispatch(openModalProfessor());
+    setModalProfessorIsOpen(true);
+  };
+
+  function handleModalStudent() {
+    dispatch(openModalStudent());
+    setModalStudentIsOpen(true);
+  };
 
   const paperStyle = {
     padding: 20,
@@ -53,12 +66,7 @@ function Register(){
               fullWidth
               variant="contained"
               size="small"
-              onClick={
-                (event) => {
-                  // setIsProfessor(true)
-                  setModalProfessorIsOpen(true)
-                }
-              }
+              onClick={(event) => {handleModalProfessor()}}
               style={buttonProfessor}
             >
               Professor(a)
@@ -67,12 +75,7 @@ function Register(){
               fullWidth
               variant="contained"
               size="small"
-              onClick={
-                (event) => {
-                  // setIsProfessor(false)
-                  setModalStudentIsOpen(true)
-                }
-              }
+              onClick={(event) => {handleModalStudent()}}
               style={buttonStudent}
             >
               Aluno(a)
@@ -90,10 +93,10 @@ function Register(){
             </div>
           </Paper>
         </Grid>
-        {/* {modalProfessorIsOpen
+        {modalProfessorIsOpen
           ? (<ModalRequestProfessor onClose={() => setModalProfessorIsOpen(false)}/>)
           : null
-        } */}
+        }
         {modalStudentIsOpen
           ? (<ModalFormStudent onClose={() => setModalStudentIsOpen(false)}/>)
           : null

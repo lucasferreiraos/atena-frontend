@@ -19,7 +19,6 @@ A aplicação vai rodar em `http://localhost:3000`.
 ### Telas disponíveis:
 
 - Login: `http://localhost:3000`
-
-- Escolher perfil: `http://localhost:3000/choose-profile`
-
+- Redefinir senha: `http://localhost:3000/redefinir-senha`
+- Nova conta: `http://localhost:3000/registro`
 - Dashboard: `http://localhost:3000/dashboard`
